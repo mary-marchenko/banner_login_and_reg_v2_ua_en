@@ -1,0 +1,52 @@
+$white: #FFF
+$magenta: #FF267E
+
+$font-suisse-medium: SuisseIntl-Medium, sans-serif //600
+
+body
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+.wrapper
+  width: 100%
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  height: 100%
+  display: flex
+.banner
+  position: relative
+  width: 50%
+  background: url("../img/bg.jpg") no-repeat 50% 20%/cover
+  @media screen and (width: 1706px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 20%/cover
+  @media screen and (max-width: 1420px)
+    background: url("../img/bg-tab.jpg") no-repeat 50% 20%/cover
+  @media screen and (max-width: 1280px) and (min-height: 1240px) and (orientation: portrait)
+    background: url("../img/bg-tab-large.jpg") no-repeat 40%/cover
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 100%
+  overflow: hidden
+  &__container
+    width: 100%
+  &__title
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    margin-top: 42px
+    &-top,
+    &-bottom
+      background-color: $magenta
+      font-family: $font-suisse-medium
+      color: $white
+      font-size: 3.25vw
+      text-transform: uppercase
+      padding: 4px 8px 4px 9px
+    &-bottom
+      margin-top: -5px
+
+
